@@ -1,7 +1,7 @@
 function CadastrarProduto(){
         produtos = {};
         produtos.descricao = document.getElementById("txtDescricao").value;
-        produtos.vaor = document.getElementById("valor").value;
+        produtos.valor = document.getElementById("txtvalor").value;
       
     
         axios.post("http://localhost:8080/Produtos", produtos)
