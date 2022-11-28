@@ -9,7 +9,8 @@ public class produtos extends PanacheEntity{
 
         
     public static List<produtos> list;
-      
+     
+    public int ID;
     public String DESCRICAO;
     public float VALOR;   
     }
