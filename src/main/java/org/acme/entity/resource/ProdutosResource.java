@@ -32,10 +32,7 @@ public class ProdutosResource {
     @Transactional
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response create(Produtos produtos){
-        if(produtos.DESCRICAO.equals("")){
-            throw new BadRequestException("descricao é obrigatoria");
-        }
+    public Response create(Produtos produtos){     
 
         produtos.persist();
         return Response.status(Status.CREATED).entity(produtos).build();
