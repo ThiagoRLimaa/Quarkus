@@ -1,14 +1,15 @@
 function CadastrarProduto(){
-        produtos = {};
-        produtos.descricao = document.getElementById("txtDescricao").value;
-        produtos.vaor = document.getElementById("valor").value;
-      
-    
-        axios.post("http://localhost:8080/Produtos", produtos)
-        .then(function (response) {
-            limparFormulario();
-        })
-        .catch(function (error) {
-    
-        });
-    }
+  produtos = {};
+  produtos.descricao = document.getElementById("txtDescricao").value;
+  produtos.valor = document.getElementById("txtvalor").value;
+
+  axios.post("http://localhost:8080/produtos", produtos)
+  .then(function (response) {
+      limparFormulario();
+  })
+  .catch(function (error) {
+
+  });
+
+  alert("Cadastro realizado com sucesso");
+}
