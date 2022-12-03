@@ -1,11 +1,11 @@
 function CadastrarProduto(){
-  produtos = {};
-  produtos.descricao = document.getElementById("txtDescricao").value;
-  produtos.valor = document.getElementById("txtvalor").value;
+  Produtos = {};
+  Produtos.id = document.getElementById("txtId").value;
+  Produtos.descricao = document.getElementById("txtDescricao").value;
+  Produtos.valor = document.getElementById("txtvalor").value;
 
-  axios.post("http://localhost:8080/produtos", produtos)
+  axios.post("http://localhost:8080/produtos", Produtos)
   .then(function (response) {
-      limparFormulario();
   })
   .catch(function (error) {
 

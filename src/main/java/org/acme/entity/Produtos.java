@@ -7,13 +7,13 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 @Entity
 public class Produtos extends PanacheEntity{
 
-    public int ID;
-    public String DESCRICAO;
-    public int VALOR;  
+  
+    public String descricao;
+    public int valor;  
 
 
-    public static List<Produtos> findByName(String DESCRICAO){
-        return find("descricao", DESCRICAO).list();
+    public static List<Produtos> findByName(int id){
+        return find("id", id).list();
     }
     
 }
